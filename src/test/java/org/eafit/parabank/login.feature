@@ -24,6 +24,7 @@ Feature: Login to Parabank
             "state": '#string',
             "zipCode": '#string'
         },
+        "phoneNumberr": '#string',
        "ssn": '#string'
     }
     """
