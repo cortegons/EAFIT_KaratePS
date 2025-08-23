@@ -9,9 +9,9 @@ Feature: Login to Parabank
   Scenario: Customer Login
     Given path 'login'
     And path 'testeo' //userName
-    And path '1234' //password
+    And path '123' //password
     When method GET
-    Then status 400
+    Then status 200
     And match response ==
     """
     {
@@ -29,3 +29,9 @@ Feature: Login to Parabank
     }
     """
     And match responseHeaders['CF-RAY'][0] != null
+  Scenario: Customer Login
+    Given path 'login'
+    And path 'testeo' //userName
+    And path '1234' //password
+    When method GET
+    Then status 400
