@@ -8,8 +8,8 @@ Feature: Login to Parabank
 
   Scenario: Customer Login
     Given path 'login'
-    And path 'test' //userName
-    And path '123' //password
+    And path 'testeo' //userName
+    And path '1234' //password
     When method GET
     Then status 200
     And match response ==
