@@ -10,5 +10,11 @@ class TestRunner {
                 .relativeTo(getClass())
                 .outputCucumberJson(true);
     }
-
+    
+    @Karate.Test
+    Karate test02_ParabankTransfer() {
+        return Karate.run("transfer")
+                .relativeTo(getClass())
+                .outputCucumberJson(true);
+    }
 }
