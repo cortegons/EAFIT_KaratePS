@@ -44,7 +44,7 @@ Feature: Login to Parabank
     And path '1234' //password
     When method GET
     Then status 400
-    And match response contains ' Invalid'
+    And match response contains 'Invalid'
 
   Scenario: Customer Login
     Given path 'login'
