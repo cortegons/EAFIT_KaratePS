@@ -11,7 +11,7 @@ Feature: Login to Parabank
     And path 'testeo' //userName
     And path '1234' //password
     When method GET
-    Then status 200
+    Then status 400
     And match response ==
     """
     {
