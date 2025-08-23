@@ -16,5 +16,5 @@ Feature: Transfer money
     And param amount = transferAmount
     When method POST
     Then status 200
-    And match response contains 'Successfully transfered'
+    And match response contains 'Successfully transferred'
  
