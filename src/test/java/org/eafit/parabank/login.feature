@@ -29,6 +29,7 @@ Feature: Login to Parabank
     }
     """
     And match responseHeaders['CF-RAY'][0] != null
+    
   Scenario: Customer Login
     Given path 'login'
     And path 'testeo' //userName
@@ -36,3 +37,19 @@ Feature: Login to Parabank
     When method GET
     Then status 400
     And match response == 'Invalid username and/or password'
+
+  Scenario: Customer Login
+    Given path 'login'
+    And path 'testeo' //userName
+    And path '1234' //password
+    When method GET
+    Then status 400
+    And match response contains ' Invalid'
+
+  Scenario: Customer Login
+    Given path 'login'
+    And path 'testeo' //userName
+    And path '1234' //password
+    When method GET
+    Then status 400
+    And match response contains 'username'
