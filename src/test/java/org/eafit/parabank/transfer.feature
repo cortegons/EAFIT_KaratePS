@@ -4,8 +4,8 @@ Feature: Transfer money
   Background:
     * url baseUrl
     * header Accept = 'application/json'
-    * def accountFrom = 32103
-    * def accountTo = 34878
+    * def accountFrom = 22446
+    * def accountTo = 24333
     * def transferAmount = 123
 
 
