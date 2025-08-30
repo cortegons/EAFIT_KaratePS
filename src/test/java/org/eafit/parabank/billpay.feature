@@ -34,6 +34,5 @@ Feature: Pay bill to Parabank
     """    
       When method POST
       Then status 200
-      And match response contains '"payeeName"'
       And match response contains { payeeName: '#string' }
     
