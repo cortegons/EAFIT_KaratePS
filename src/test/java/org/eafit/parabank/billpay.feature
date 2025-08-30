@@ -35,4 +35,5 @@ Feature: Pay bill to Parabank
       When method POST
       Then status 200
       And match response contains { payeeName: '#string' }
+      And match response.payeeName == 'pruebas karate'
     
