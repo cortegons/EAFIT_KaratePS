@@ -31,4 +31,7 @@ Feature: Pay bill to Parabank
       "phoneNumber": #(phoneNumber),
       "accountNumber": #(accountNumber),
     }
-    """
+    """    
+    When method POST
+    Then status 200
+    
